@@ -1,5 +1,5 @@
 import "./styles.css";
-import { home_page } from "./homepage/homepage.js";
+import { home_page } from "./homepage.js";
 import { starters_page } from "./starters.js";
 import { meals_page } from "./meals.js";
 import { drinks_page } from "./drinks.js";
