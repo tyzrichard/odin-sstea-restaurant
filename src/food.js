@@ -4,7 +4,7 @@ import spicy from './assets/general_meal/spicy.png';
 import dessert from './assets/general_meal/dessert.png';
 import drink from './assets/general_meal/drink.png';
 
-export const add_menu_header = (mainheader, subheader) => {
+export const add_menu_header = (group, mainheader, subheader) => {
     const menu_header = document.createElement("div");
     menu_header.classList.add("menu-header");
 
@@ -16,6 +16,8 @@ export const add_menu_header = (mainheader, subheader) => {
     menu_sub_header.classList.add("menu-sub-header");
     menu_sub_header.textContent = subheader;
     menu_header.appendChild(menu_sub_header);
+
+    group.appendChild(menu_header);
 }
 
 export const new_food = (group, foodImg, foodName, foodDesc, extraInfo) => {

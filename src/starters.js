@@ -8,15 +8,16 @@ import tomato from './assets/starters/tomato_soup.png'
 
 export const starters_page = () => {
     const starters = document.createElement("div");
-    add_menu_header("Starters", "Select something to start off the meal with!");
+    add_menu_header(starters, "Starters", "Select something to start off the meal with!");
 
     const food_list = document.createElement("div");
-    new_food(food_list, fries, "Cheesy Fries", "Loaded to the brim.", ["Bestseller"]);
-    new_food(food_list, fries, "Cheesy Fries", "Loaded to the brim.", ["Bestseller"]);
-    new_food(food_list, fries, "Cheesy Fries", "Loaded to the brim.", ["Bestseller"]);
-    new_food(food_list, fries, "Cheesy Fries", "Loaded to the brim.", ["Bestseller"]);
-    new_food(food_list, fries, "Cheesy Fries", "Loaded to the brim.", ["Bestseller"]);
-    new_food(food_list, fries, "Cheesy Fries", "Loaded to the brim.", ["Bestseller"]);
+    new_food(food_list, fries, "Cheesy Fries", "Loaded to the brim.", ["bestseller"]);
+    new_food(food_list, mushroom, "Mushroom Soup", "Creamy and filling soup.", ["vegetarian"]);
+    new_food(food_list, tomato, "Tomato Soup", "Tasty and refreshing!", ["bestseller", "vegetarian"]);
+    new_food(food_list, chicken, "Chicken Wings", "Tender and juicy.", []);
+    new_food(food_list, spring_rolls, "Spring Rolls", "A Vietnamese must-have.", ["bestseller"]);
+    new_food(food_list, tofu, "Tofu with Century Egg", "The perfect blend of flavours.", ["bestseller"]);
+    starters.appendChild(food_list);
 
     const content = document.querySelector("#content");
     content.appendChild(starters);
