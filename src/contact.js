@@ -14,14 +14,14 @@ export const contact_page = () => {
     crew_section.appendChild(crew_section_title);
 
     const crew_members = document.createElement("div");
-    
-    function add_member (memberImg, memberName, memberPos) {
+
+    function add_member(memberImg, memberName, memberPos) {
         const member = document.createElement("div");
 
         const member_img = document.createElement("img");
         member_img.src = memberImg;
         member.appendChild(member_img);
-        
+
         const member_info = document.createElement("div");
         const member_name = document.createElement("h6");
         member_name.textContent = memberName;
@@ -30,7 +30,7 @@ export const contact_page = () => {
         const member_pos = document.createElement("p");
         member_pos.textContent = memberPos;
         member_info.appendChild(member_pos);
-        
+
         member.appendChild(member_info);
         crew_members.appendChild(member);
     }
@@ -52,7 +52,7 @@ export const contact_page = () => {
 
     const contact_form = document.createElement("form");
 
-    function addQn (topic, question, type) {
+    function addQn(topic, question, type) {
         const qn = document.createElement("div");
         qn.classList.add("question");
 
@@ -60,7 +60,7 @@ export const contact_page = () => {
         question_header.for = topic;
         question_header.textContent = question;
         qn.appendChild(question_header);
-        
+
         const answer = document.createElement("input");
         answer.type = type;
         answer.id = topic;
@@ -79,6 +79,16 @@ export const contact_page = () => {
     const submit_button = document.createElement("input");
     submit_button.type = "submit";
     submit_button.value = "Submit";
+    submit_button.addEventListener("click", () => {
+        event.preventDefault();
+        const formData = new FormData(contact_form);
+        const formValues = [];
+        formData.forEach((value) => {
+            formValues.push(value);
+        });
+        contact_form.reset();
+        alert(`Hey ${formValues[0]}, we have received your reservation on ${formValues[2]}, at ${formValues[3]}. See you there!`);
+    })
     contact_form.appendChild(submit_button);
 
     contact_section.appendChild(contact_form);
