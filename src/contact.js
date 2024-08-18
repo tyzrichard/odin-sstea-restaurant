@@ -23,7 +23,7 @@ export const contact_page = () => {
         member.appendChild(member_img);
 
         const member_info = document.createElement("div");
-        const member_name = document.createElement("h6");
+        const member_name = document.createElement("h3");
         member_name.textContent = memberName;
         member_info.appendChild(member_name);
 

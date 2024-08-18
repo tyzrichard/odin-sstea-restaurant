@@ -79,8 +79,7 @@ export const home_page = () => {
     quote.textContent = "SSTea Incorporated is THE BEST out there! 10 out of 10, would highly recommend! I love their food, and everyone should give this place a shot. You won’t regret it!";
     quotation.appendChild(quote);
 
-    const quote_author = document.createElement("div");
-    quote_author.classList.add("quote-author");
+    const quote_author = document.createElement("h5");
     quote_author.textContent = "-Mr Nivaw Lapgaw, satisfied customer";
     quotation.appendChild(quote_author);
 
