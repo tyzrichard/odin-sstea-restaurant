@@ -11,6 +11,7 @@ export const starters_page = () => {
     add_menu_header(starters, "Starters", "Select something to start off the meal with!");
 
     const food_list = document.createElement("div");
+    food_list.classList.add("food-list");
     new_food(food_list, fries, "Cheesy Fries", "Loaded to the brim.", ["bestseller"]);
     new_food(food_list, mushroom, "Mushroom Soup", "Creamy and filling soup.", ["vegetarian"]);
     new_food(food_list, tomato, "Tomato Soup", "Tasty and refreshing!", ["bestseller", "vegetarian"]);

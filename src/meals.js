@@ -11,6 +11,7 @@ export const meals_page = () => {
     add_menu_header(meals, "Main Courses", "Seeking a good meal? Look no further than our catalogue of dishes, guaranteed to satiate that appetite!");
 
     const food_list = document.createElement("div");
+    food_list.classList.add("food-list");
     new_food(food_list, pizza, "Hawaiian Pizza", "The Pan-Fried Classic.", ["bestseller"]);
     new_food(food_list, burger, "The Impossible Burger", "100% Vegetarian!", ["vegetarian"]);
     new_food(food_list, crab, "Chili Crab", "Hot and spicy seafood.", ["bestseller", "spicy"]);

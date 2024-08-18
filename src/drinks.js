@@ -11,6 +11,7 @@ export const drinks_page = () => {
     add_menu_header(drinks, "Drinks and Desserts", "End off the feast with one of our specialty drinks or desserts!");
 
     const food_list = document.createElement("div");
+    food_list.classList.add("food-list");
     new_food(food_list, waffles, "Ice Cream Waffles", "Sweet and Savoury!", ["bestseller", "dessert"]);
     new_food(food_list, eclair, "Chocolate Eclairs", "Comes in sets of three!", ["dessert"]);
     new_food(food_list, ice_katchang, "Ice Katchang", "So. Many. Ingredients!", ["bestseller", "dessert"]);

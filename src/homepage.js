@@ -10,7 +10,7 @@ export const home_page = () => {
 
     //Homepage Header
     const homepage_header = document.createElement("div");
-    homepage_header.classList.add("homepage_header");
+    homepage_header.classList.add("homepage-header");
 
     const homepage_header_info = document.createElement("div");
 
@@ -18,7 +18,7 @@ export const home_page = () => {
     header_title.textContent = "Feeling Hungry? \nYou’ve come to the right place.";
     homepage_header_info.appendChild(header_title);
 
-    const header_text = document.createElement("h3");
+    const header_text = document.createElement("h5");
     header_text.textContent = "Located deep within the mystic SSTraits of Dover, SSTea Inc. has captured the hearts of many with their wide range of exquisite meals. Our services are second to none, and our dishes are guaranteed to satisfy your cravings. Book a table today!";
     homepage_header_info.appendChild(header_text);
 
@@ -30,7 +30,7 @@ export const home_page = () => {
 
     const homepage_img = document.createElement("img");
     homepage_img.src = homepage_header_img
-    homepage_img.classList.add("homepage_img");
+    homepage_img.classList.add("homepage-img");
     homepage_header.appendChild(homepage_img);
 
     home.appendChild(homepage_header);
