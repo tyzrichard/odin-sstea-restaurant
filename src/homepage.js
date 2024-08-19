@@ -4,9 +4,12 @@ import maki_roll from "./assets/homepage/maki_roll.png";
 import pasta from "./assets/homepage/pasta.png";
 import pizza from "./assets/homepage/pizza.png";
 import waffles from "./assets/homepage/waffles.png";
+import { meals_page } from "./meals";
+import { contact_page } from "./contact";
 
 export const home_page = () => {
     const home = document.createElement("div");
+    let pressed = false;
 
     //Homepage Header
     const homepage_header = document.createElement("div");
@@ -24,6 +27,13 @@ export const home_page = () => {
 
     const header_button = document.createElement("button");
     header_button.textContent = "Browse our Menu";
+    header_button.addEventListener("click", () => {
+        if (!pressed){
+            pressed = true;
+            meals_page();
+            content.removeChild(content.firstChild); 
+        }
+    });
     homepage_header_info.appendChild(header_button);
 
     homepage_header.appendChild(homepage_header_info);
@@ -107,6 +117,13 @@ export const home_page = () => {
 
     const cta_button = document.createElement("button");
     cta_button.textContent = "Book a Table";
+    cta_button.addEventListener("click", () => {
+        if (!pressed){
+            pressed = true;
+            contact_page();
+            content.removeChild(content.firstChild); 
+        }
+    });
     cta.appendChild(cta_button);
 
     cta_section.appendChild(cta);
