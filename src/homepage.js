@@ -104,6 +104,11 @@ export const home_page = () => {
     cta_text.appendChild(cta_text_bottom);
 
     cta.appendChild(cta_text);
+
+    const cta_button = document.createElement("button");
+    cta_button.textContent = "View on Map";
+    cta.appendChild(cta_button);
+
     cta_section.appendChild(cta);
     home.appendChild(cta_section);
 
