@@ -15,7 +15,7 @@ export const home_page = () => {
     const homepage_header_info = document.createElement("div");
 
     const header_title = document.createElement("h1");
-    header_title.textContent = "Feeling Hungry? \nYou’ve come to the right place.";
+    header_title.textContent = "Feeling Hungry? \r\nYou’ve come to the right place.";
     homepage_header_info.appendChild(header_title);
 
     const header_text = document.createElement("h5");
@@ -48,7 +48,7 @@ export const home_page = () => {
 
     function addDish (dishName, dishImg) {
         const dish = document.createElement("div");
-        dish.classList.add("homepage_dish");
+        dish.classList.add("homepage-dish");
 
         const dish_img = document.createElement("img");
         dish_img.src = dishImg;
