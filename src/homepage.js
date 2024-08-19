@@ -100,13 +100,13 @@ export const home_page = () => {
     cta_text.appendChild(cta_text_top);
 
     const cta_text_bottom = document.createElement("p");
-    cta_text_bottom.textContent = "Come visit our outlet at the SSTraits of Dover and experience a dining experience like never before!"
+    cta_text_bottom.textContent = "Visit our outlet at the SSTraits of Dover and experience a dining experience like never before!"
     cta_text.appendChild(cta_text_bottom);
 
     cta.appendChild(cta_text);
 
     const cta_button = document.createElement("button");
-    cta_button.textContent = "View on Map";
+    cta_button.textContent = "Book a Table";
     cta.appendChild(cta_button);
 
     cta_section.appendChild(cta);

@@ -92,7 +92,7 @@ nav>button {
 footer {
     color: #FFFFFF;
     background-color: #1F2937;
-    padding: 20px 10px;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -138,7 +138,7 @@ p {
     display: flex;
     align-items: center;
     gap: 6vw;
-    padding: 30px 125px 50px;
+    padding: 30px 8.5vw 50px;
     color: #FFFFFF;
     background-color: #1F2937;
 }
@@ -159,7 +159,7 @@ button,
 .button {
     color: #FFFFFF;
     background-color: #3882F6;
-    padding: 10px 30px;
+    padding: clamp(5px, 1.5vw, 10px) 2vw;
     border-width: 0;
     border-radius: 10px;
     width: fit-content;
@@ -169,7 +169,7 @@ button,
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 75px 125px;
+    padding: 75px 8.5vw;
     align-items: center;
 }
 
@@ -196,15 +196,15 @@ button,
 }
 
 img {
-    height: 195px;
-    width: 195px;
+    height: 13vw;
+    width: 13vw;
     object-fit: cover;
     border-radius: 20px;
 }
 
 .quotation {
     background-color: #E5E5EB;
-    padding: 100px 250px;
+    padding: 100px 16.5vw;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -221,14 +221,14 @@ img {
 }
 
 .cta-section {
-    padding: 75px 175px;
+    padding: 75px 11.5vw;
 }
 
 .cta {
     color: #FFFFFF;
     background-color: #3882F6;
     border-radius: 20px;
-    padding: 50px 70px;
+    padding: 50px 4.5vw;
     display: flex;
     justify-content: space-between;
 }
@@ -242,7 +242,7 @@ img {
 .crew-section {
     display: flex;
     flex-direction: column;
-    padding: 75px 125px;
+    padding: 75px 8.5vw;
     gap: 40px;
     align-items: center;
 }
@@ -251,7 +251,7 @@ img {
     display: flex;
     width: 100%;
     box-sizing: border-box;
-    gap: 110px;
+    gap: 7.5vw;
     justify-content: center;
 }
 
@@ -264,14 +264,14 @@ img {
 }
 
 .member>img {
-    height: 230px;
-    width: 230px;
-    border-radius: 300px;
+    height: 16vw;
+    width: 16vw;
+    border-radius: 1000px;
 }
 
 .contact-section {
     background-color: #E5E5EB;
-    padding: 60px 300px;
+    padding: 60px 20vw;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -290,7 +290,7 @@ form {
 form :nth-child(1),
 form :nth-child(2) {
     display: flex;
-    column-gap: 25px;
+    column-gap: 1.6vw;
     width: 100%;
     box-sizing: border-box;
 }
@@ -319,7 +319,7 @@ form :last-child {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding: 75px 200px;
+    padding: 75px 13.5vw;
 }
 
 .menu-header {
@@ -336,8 +336,8 @@ form :last-child {
 .food-list {
     display: grid;
     justify-content: center;
-    gap: 30px;
-    grid-template-columns: repeat(auto-fit, 275px);
+    gap: 2vw;
+    grid-template-columns: repeat(auto-fit, max(150px, 18.5vw));
 }
 
 .food {
@@ -345,11 +345,16 @@ form :last-child {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 30px 40px;
+    padding: 30px 0;
     background-color: #FFF9EB;
     border-radius: 20px;
     box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.1); 
     text-align: center;
+}
+
+.food > img {
+    min-width: 110px;
+    min-height: 110px;
 }
 
 .food :last-child {
@@ -361,7 +366,7 @@ form :last-child {
     display: flex;
     gap: 5px;
     align-items: center;
-    padding: 10px 8px;
+    padding: 8px 0.65vw;
     border-radius: 5px;
     background-color: rgba(229, 229, 235, 0.5);
     width: fit-content;
@@ -373,6 +378,6 @@ form :last-child {
 }
 
 .food-img {
-    height: 16px;
-    width: 16px;
+    height: 1rem;
+    width: 1rem;
 }
