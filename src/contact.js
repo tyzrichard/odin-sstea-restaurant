@@ -14,9 +14,11 @@ export const contact_page = () => {
     crew_section.appendChild(crew_section_title);
 
     const crew_members = document.createElement("div");
+    crew_members.classList.add("crew-members");
 
     function add_member(memberImg, memberName, memberPos) {
         const member = document.createElement("div");
+        member.classList.add("member");
 
         const member_img = document.createElement("img");
         member_img.src = memberImg;
@@ -52,7 +54,7 @@ export const contact_page = () => {
 
     const contact_form = document.createElement("form");
 
-    function addQn(topic, question, type) {
+    function addQn(topic, question, type, parent) {
         const qn = document.createElement("div");
         qn.classList.add("question");
 
@@ -67,16 +69,23 @@ export const contact_page = () => {
         answer.name = topic;
         qn.appendChild(answer);
 
-        contact_form.appendChild(qn);
+        parent.appendChild(qn);
     }
 
-    addQn("name", "Your Name", "text");
-    addQn("number", "Phone Number", "tel");
-    addQn("date", "Date", "date");
-    addQn("time", "Time", "time");
-    addQn("extras", "Anything else you would like to tell us", "text");
+    const row_1 = document.createElement("div");
+    addQn("name", "Your Name", "text", row_1);
+    addQn("number", "Phone Number", "tel", row_1);
+    contact_form.appendChild(row_1);
+
+    const row_2 = document.createElement("div");
+    addQn("date", "Date", "date", row_2);
+    addQn("time", "Time", "time", row_2);
+    contact_form.appendChild(row_2);
+
+    addQn("extras", "Anything else you would like to tell us", "text", contact_form);
 
     const submit_button = document.createElement("input");
+    submit_button.classList.add("button")
     submit_button.type = "submit";
     submit_button.value = "Submit";
     submit_button.addEventListener("click", () => {

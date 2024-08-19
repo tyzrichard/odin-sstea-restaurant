@@ -8,6 +8,7 @@ import bubble_tea from './assets/drinks/tea.png'
 
 export const drinks_page = () => {
     const drinks = document.createElement("div");
+    drinks.classList.add("menu");
     add_menu_header(drinks, "Drinks and Desserts", "End off the feast with one of our specialty drinks or desserts!");
 
     const food_list = document.createElement("div");
