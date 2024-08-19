@@ -22,6 +22,7 @@ export const add_menu_header = (group, mainheader, subheader) => {
 
 export const new_food = (group, foodImg, foodName, foodDesc, extraInfo) => {
     const food = document.createElement("div");
+    food.classList.add("food");
 
     //Image of the food
     const food_image = document.createElement("img");
@@ -50,6 +51,7 @@ export const new_food = (group, foodImg, foodName, foodDesc, extraInfo) => {
         extra_info_bit.appendChild(extra_info_text);
 
         const extra_info_logo = document.createElement("img");
+        extra_info_logo.classList.add("food-img");
         extra_info_logo.src = logo;
         extra_info_bit.appendChild(extra_info_logo);
         extra_info.appendChild(extra_info_bit);

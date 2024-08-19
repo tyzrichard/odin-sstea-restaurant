@@ -180,6 +180,7 @@ button,
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
 .recommended-dishes :nth-child(odd)>img {
@@ -310,6 +311,12 @@ form :last-child {
 }
 
 /* food menus */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 75px 200px;
+}
 
 .menu-header {
     display: flex;
@@ -323,5 +330,45 @@ form :last-child {
 }
 
 .food-list {
+    display: grid;
+    justify-content: center;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, 275px);
+}
 
+.food {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 40px;
+    background-color: #FFF9EB;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+.food :last-child {
+    display: flex;
+    gap: 10px;
+}
+
+.food :last-child>div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 10px 8px;
+    border-radius: 5px;
+    background-color: rgba(229, 229, 235, 0.5);
+    width: fit-content;
+}
+
+.extra-info-text {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.food-img {
+    height: 16px;
+    width: 16px;
 }

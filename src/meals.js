@@ -8,6 +8,7 @@ import ramen from './assets/meals/ramen.png'
 
 export const meals_page = () => {
     const meals = document.createElement("div");
+    meals.classList.add("menu");
     add_menu_header(meals, "Main Courses", "Seeking a good meal? Look no further than our catalogue of dishes, guaranteed to satiate that appetite!");
 
     const food_list = document.createElement("div");
